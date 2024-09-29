@@ -1036,7 +1036,7 @@ async function run() {
 
 
         if (push) {
-            await exec.exec(`docker push ${image_full_name}`);
+            await exec.exec(`docker push --all-tags ${image_full_name}`);
         }
 
     } catch (err) {
